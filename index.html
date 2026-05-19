@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay New Visayas - Rescue System</title>
+    <style>
+        :root {
+            /* Warm Earthy Tones */
+            --outer-bg: #0d0b09; 
+            --warm-shadow: #1a140f; 
+            --text-warm: #d8d2cb; 
+            
+            /* Professional Warm Accents */
+            --accent-gold: #c48a3d; 
+            --accent-wood: #3d342d; 
+            --white: #ffffff;
+        }
+
+        body {
+            background: radial-gradient(circle at center, var(--warm-shadow) 0%, var(--outer-bg) 100%);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-warm);
+            padding-top: 20px;
+        }
+
+        /* Header Layout */
+        .outer-header {
+            width: 96%; 
+            max-width: 1500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 15px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            margin-right: 15px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Grouped Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-nav {
+            padding: 10px 24px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-about {
+            background-color: transparent;
+            border: 1px solid var(--text-warm);
+            color: var(--text-warm);
+        }
+
+        .btn-login {
+            background-color: var(--accent-wood);
+            border: 1px solid rgba(216, 210, 203, 0.1);
+        }
+
+        .btn-signup {
+            background-color: var(--accent-gold);
+            color: #0d0b09; 
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Image Wrapper & Content Positioning */
+        .image-wrapper {
+            width: 96%; 
+            max-width: 1500px; 
+            height: 82vh; 
+            background-image: url('bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            border-radius: 28px; 
+            position: relative;
+            box-shadow: 0 35px 90px rgba(0, 0, 0, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+            display: flex;
+            align-items: center; /* Vertical Center */
+            justify-content: flex-start; /* Left Aligned */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+            z-index: 1;
+        }
+
+        /* Slogan Text Styling */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-left: 60px; /* Spacing from left edge */
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .hero-title span {
+            color: var(--accent-gold); /* Highlights "Rescue" and "Adoption" */
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: var(--text-warm);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="outer-header">
+        <div class="logo-section">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">Barangay New Visayas</span>
+        </div>
+
+        <nav class="nav-buttons">
+            <button class="btn-nav btn-about" onclick="window.location.href='aboutus.php'">About Us</button>
+            <button class="btn-nav btn-login" onclick="window.location.href='login.php'">Log In</button>
+            <button class="btn-nav btn-signup" onclick="window.location.href='signup.php'">Sign Up</button>
+        </nav>
+    </header>
+
+    <div class="image-wrapper">
+        <div class="overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                A Street-to-Home <span>Rescue</span>, Adoption, and <span>Donation</span> System
+            </h1>
+            <p class="hero-subtitle">Making a difference, one paw at a time.</p>
+        </div>
+    </div>
+
+</body>
+</html>
